@@ -1,0 +1,28 @@
+{
+	"name": "pi-shush",
+	"version": "0.1.0",
+	"description": "Selection-over-compression verbosity control for pi, ported from the shush Claude Code plugin",
+	"license": "MIT",
+	"type": "module",
+	"keywords": ["pi-package", "pi", "pi-extension", "verbosity", "concise", "prose"],
+	"engines": {
+		"node": ">=20"
+	},
+	"pi": {
+		"extensions": ["./index.ts"],
+		"skills": ["./skills/shush"]
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"devDependencies": {
+		"@earendil-works/pi-coding-agent": "*",
+		"@types/node": "^22.0.0",
+		"typescript": "^5.6.0",
+		"vitest": "^3.0.0"
+	}
+}
